@@ -1,1 +1,3 @@
-# New-repository
+# AutoTest file
+
+## Сhecking the autotest
