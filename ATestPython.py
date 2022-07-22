@@ -16,9 +16,9 @@ def set_cam_cfg(self, cam_cfg):
         self.mcu = SerialMCU(self.utils, self.cam_cfg)
         self.isp = SerialISP(self.utils, self.cam_cfg)
 
+        
        def connect_uart(self):
         self.mcu.connect()
         self.isp.connect()
         self.connected = True
-     
-        
+            
