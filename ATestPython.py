@@ -15,3 +15,16 @@ def set_cam_cfg(self, cam_cfg):
         self.cam_defaults = self.utils.defaults.get_defaults_cam(cam_cfg.get('model'))
         self.mcu = SerialMCU(self.utils, self.cam_cfg)
         self.isp = SerialISP(self.utils, self.cam_cfg)
+        
+def connect_uart(self):
+        self.mcu.connect()
+        self.isp.connect()
+        self.connected = True
+            
+def disconnect_uart(self):
+        """ disconnect uart connections"""
+        self.logger.log_this('D2AP: Disconnecting Serial Ports')
+        self.mcu.disconnect()
+        self.isp.disconnect()
+        self.connected = False
+
